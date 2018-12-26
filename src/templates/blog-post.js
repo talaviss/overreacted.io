@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 import { formatReadingTime } from '../utils/helpers'
 import { rhythm, scale } from '../utils/typography'
 
-const GITHUB_USERNAME = 'gaearon'
+const GITHUB_USERNAME = 'talaviss'
 const GITHUB_REPO_NAME = 'overreacted.io'
 
 class BlogPostTemplate extends React.Component {
@@ -65,7 +65,7 @@ class BlogPostTemplate extends React.Component {
             }}
             to={'/'}
           >
-            Overreacted
+            Reactified
           </Link>
         </h3>
         <Bio />

@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Overreacted',
-    author: 'Dan Abramov',
+    title: 'Reactified',
+    author: 'Tal Avissar',
     description:
-      'Personal blog by Dan Abramov. I explain with words and code.',
-    siteUrl: 'https://overreacted.io',
+      'Personal blog by Tal Avissar. I explain with words and code.',
+    siteUrl: 'https://reactified.io',
     social: {
-      twitter: '@dan_abramov',
+      twitter: '@talaviss',
     },
   },
   pathPrefix: '/',
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Overreacted`,
-        short_name: `Overreacted`,
+        name: `Reactified`,
+        short_name: `Reactified`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,

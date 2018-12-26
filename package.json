@@ -1,11 +1,11 @@
 {
-  "name": "overreacted",
+  "name": "reactified",
   "private": true,
-  "description": "Overreacted",
+  "description": "reactified",
   "version": "1.0.0",
-  "author": "Dan Abramov <dan.abramov@me.com>",
+  "author": "Tal Avissar <tal.avissar@me.com>",
   "bugs": {
-    "url": "https://github.com/gaearon/overreacted.io/issues"
+    "url": "https://github.com/talaviss/reactified.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.19",
@@ -41,7 +41,7 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://overreacted.io",
+  "homepage": "https://talavissar.com",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop",
@@ -50,7 +50,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "rm -rf public && gatsby build",
-    "deploy": "yarn build && cd public && now alias $(now) overreacted.io",
+    "deploy": "yarn build && cd public && now alias $(now) talavissar.com",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }

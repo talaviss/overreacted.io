@@ -11,9 +11,10 @@ function Greeting() {
   return <p>Hello</p>;
 }
 ```
-
+1 + 3 = 4
+50 /2 = 25 
 React also supports defining it as a class:
-
+ 
 ```jsx
 class Greeting extends React.Component {
   render() {
@@ -21,7 +22,6 @@ class Greeting extends React.Component {
   }
 }
 ```
-
 (Until [recently](https://reactjs.org/docs/hooks-intro.html), that was the only way to use features like state.)
 
 When you want to render a `<Greeting />`, you don’t care how it’s defined:
@@ -67,6 +67,7 @@ In both cases React’s goal is to get the rendered node (in this example, `<p>H
 Just like in my [previous post](/why-do-we-write-super-props/), **you don’t *need* to know this to be productive in React.** I didn’t know this for years. Please don’t turn this into an interview question. In fact, this post is more about JavaScript than it is about React.
 
 This blog is for a curious reader who wants to know *why* React works in a certain way. Are you that person? Then let’s dig in together.
+
 
 **This is a long journey. Buckle up. This post doesn’t have much information about React itself, but we’ll go through some aspects of `new`, `this`, `class`, arrow functions, `prototype`, `__proto__`, `instanceof`, and how those things work together in JavaScript. Luckily, you don’t need to think about those as much when you *use* React. If you’re implementing React though...**
 
