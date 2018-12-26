@@ -64,7 +64,7 @@ In both cases React’s goal is to get the rendered node (in this example, `<p>H
 
 **So how does React know if something is a class or a function?**
 
-Just like in my [previous post](/why-do-we-write-super-props/), **you don’t *need* to know this to be productive in React.** I didn’t know this for years. Please don’t turn this into an interview question. In fact, this post is more about JavaScript than it is about React.
+**you don’t *need* to know this to be productive in React.** I didn’t know this for years. Please don’t turn this into an interview question. In fact, this post is more about JavaScript than it is about React.
 
 This blog is for a curious reader who wants to know *why* React works in a certain way. Are you that person? Then let’s dig in together.
 
