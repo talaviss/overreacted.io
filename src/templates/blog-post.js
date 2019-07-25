@@ -38,15 +38,15 @@ class BlogPostTemplate extends React.Component {
           {` • ${formatReadingTime(post.timeToRead)}`}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <p>
+        <h3>
           <a
             href={mediumUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Medium stories
+            Read more in my  Medium stories
           </a>
-        </p>
+        </h3>
         <hr
           style={{
             marginBottom: rhythm(1),
