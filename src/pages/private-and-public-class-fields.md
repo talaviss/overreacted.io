@@ -1,6 +1,6 @@
 ---
 title: Public and private class fields
-date: '2018-12-24'
+date: '2018-12-25'
 spoiler: new private public fields is coming in v8
 ---
 
@@ -9,12 +9,12 @@ Several proposals expand the existing JavaScript class syntax with new functiona
 Here’s a code example that creates an instance of a class named IncreasingCounter:
 
 ```jsx
-const counter = new IncreasingCounter();
-counter.value;
+const counter = new IncreasingCounter()
+counter.value
 // logs 'Getting the current value!'
 // → 0
-counter.increment();
-counter.value;
+counter.increment()
+counter.value
 // logs 'Getting the current value!'
 // → 1
 ```
@@ -22,26 +22,27 @@ counter.value;
 Note that accessing the value executes some code (i.e., it logs a message) before returning the result. Now ask yourself, how would you implement this class in JavaScript? 🤔
 
 #### ES2015 class syntax
+
 Here’s how IncreasingCounter could be implemented using ES2015 class syntax:
 
 ```jsx
 class IncreasingCounter {
   constructor() {
-    this._count = 0;
+    this._count = 0
   }
   get value() {
-    console.log('Getting the current value!');
-    return this._count;
+    console.log('Getting the current value!')
+    return this._count
   }
   increment() {
-    this._count++;
+    this._count++
   }
 }
 ```
 
-The _count property is now nicely declared at the top of the class. We no longer need a constructor just to define some fields. Neat!
+The \_count property is now nicely declared at the top of the class. We no longer need a constructor just to define some fields. Neat!
 
-However, the _count field is still a public property. In this particular example, we want to prevent people from accessing the property directly.
+However, the \_count field is still a public property. In this particular example, we want to prevent people from accessing the property directly.
 
 #### Private class fields
 
@@ -49,13 +50,13 @@ That’s where private class fields come in. The new private fields syntax is si
 
 ```jsx
 class IncreasingCounter {
-  #count = 0;
+  #count = 0
   get value() {
-    console.log('Getting the current value!');
-    return this.#count;
+    console.log('Getting the current value!')
+    return this.#count
   }
   increment() {
-    this.#count++;
+    this.#count++
   }
 }
 ```
@@ -108,44 +109,44 @@ FakeMath.#computeRandomNumber();
 
 #### Simpler subclassing
 
-The benefits of the class fields syntax become even clearer when dealing with subclasses that introduce additional fields. 
+The benefits of the class fields syntax become even clearer when dealing with subclasses that introduce additional fields.
 Imagine the following base class Animal:
 
 ```jsx
 class Animal {
   constructor(name) {
-    this.name = name;
+    this.name = name
   }
 }
 ```
 
-To create a `Cat` subclass that introduces an additional instance property, 
+To create a `Cat` subclass that introduces an additional instance property,
 you’d previously have to call super() to run the constructor of the `Animal` base class before creating the property:
-
 
 ```jsx
 class Cat extends Animal {
   constructor(name) {
-    super(name);
-    this.likesBaths = false;
+    super(name)
+    this.likesBaths = false
   }
   meow() {
-    console.log('Meow!');
+    console.log('Meow!')
   }
 }
 ```
 
-That’s a lot of boilerplate just to indicate that cats don’t enjoy taking baths. 
+That’s a lot of boilerplate just to indicate that cats don’t enjoy taking baths.
 Luckily, the class fields syntax removes the need for the whole constructor, including the awkward `super()` call:
 
 ```jsx
 class Cat extends Animal {
-  likesBaths = false;
+  likesBaths = false
   meow() {
-    console.log('Meow!');
+    console.log('Meow!')
   }
 }
 ```
 
 #### Conclusion
+
 Public class fields are shipping in V8 v7.2 and Chrome 72.
