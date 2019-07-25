@@ -17,6 +17,7 @@
     "gatsby-plugin-sharp": "^2.0.6",
     "gatsby-plugin-typography": "^2.2.0",
     "gatsby-remark-copy-linked-files": "^2.0.5",
+    "gatsby-remark-embed-youtube": "^0.0.7",
     "gatsby-remark-images": "^2.0.4",
     "gatsby-remark-prismjs": "^3.0.0",
     "gatsby-remark-responsive-iframe": "^2.0.5",
@@ -38,12 +39,13 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
-    "gh-pages": "^1.2.0",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.14.2"
   },
   "homepage": "https://talavissar.com",
   "license": "MIT",
   "scripts": {
+    "deploy:github": "npm run build && node ./scripts/deploy-github",
     "dev": "gatsby develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
