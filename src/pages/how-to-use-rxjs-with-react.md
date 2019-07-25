@@ -143,7 +143,8 @@ sub.subscribe(console.log);
 sub.next(456); //nothing logged
 sub.complete(); //456, 456 logged by both subscribers
 ```
-
+# Videos:
 Here is a very good video for beginners
+`youtube:https://www.youtube.com/embed/PhggNGsSQyg`
 
-'https://www.youtube.com/watch?v=PhggNGsSQyg`
+
