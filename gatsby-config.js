@@ -4,13 +4,14 @@ module.exports = {
     author: 'Tal Avissar',
     description:
       'Personal blog by Tal Avissar. I explain with words and code.',
-    siteUrl: 'https://reactified.io',
+    siteUrl: 'http://www.talavissar.com',
     social: {
       twitter: '@talaviss',
     },
   },
   pathPrefix: '/',
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
