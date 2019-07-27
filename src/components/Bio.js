@@ -1,9 +1,5 @@
 import React from 'react'
 
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-
 import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
 
@@ -24,11 +20,12 @@ class Bio extends React.Component {
             marginBottom: 0,
             width: rhythm(2),
             height: rhythm(2),
+            borderRadius: '50%',
           }}
         />
         <p style={{ maxWidth: 310 }}>
-          Personal blog by <a href="https://mobile.twitter.com/talaviss">Tal Avissar</a>.
-          {' '}
+          Personal blog by{' '}
+          <a href="https://mobile.twitter.com/talaviss">Tal Avissar</a>.{' '}
           I&nbsp;explain with words and code.
         </p>
       </div>

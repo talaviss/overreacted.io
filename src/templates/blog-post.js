@@ -16,8 +16,11 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const { previous, next, slug } = this.props.pageContext
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.replace(/\//g, '')}.md`
-    const mediumUrl = `https://medium.com/talaviss`;
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.replace(
+      /\//g,
+      ''
+    )}.md`
+    const mediumUrl = `https://medium.com/talaviss`
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -39,12 +42,8 @@ class BlogPostTemplate extends React.Component {
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <h3>
-          <a
-            href={mediumUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read more in my  Medium stories
+          <a href={mediumUrl} target="_blank" rel="noopener noreferrer">
+            Read more in my Medium stories
           </a>
         </h3>
         <hr
@@ -62,7 +61,7 @@ class BlogPostTemplate extends React.Component {
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: '#ffa7c4',
+              color: '#806CEE',
             }}
             to={'/'}
           >
@@ -120,6 +119,7 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        langKey
       }
     }
   }
