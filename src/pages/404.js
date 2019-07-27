@@ -2,15 +2,18 @@ import React from 'react'
 import Layout from '../components/Layout'
 
 class NotFoundPage extends React.Component {
-
-
- 
   render() {
-  
     return (
       <Layout location={this.props.location}>
-        <h1>Not Found</h1>
-        <p>I haven’t written this post yet. Will you help me write it?</p>
+        <h1>Page Not Found</h1>
+        <p>
+          I haven’t written this post yet. It's important subject so if you want
+          to join - you're welcome. Will you help me write it?
+        </p>
+        <p>
+          So in the mean time i've added this you tube link that explain one of
+          the most beautiful math equation:
+        </p>
         <iframe
           width="560"
           height="315"
@@ -19,7 +22,6 @@ class NotFoundPage extends React.Component {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullscreen
         />
-        <p>Too doo doo doo doo doo doo doo</p>
       </Layout>
     )
   }
